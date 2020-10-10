@@ -1,5 +1,4 @@
-Realtime Application
-===
+# Realtime Application
 
 ### Overview
 
@@ -22,3 +21,15 @@ You should only need to install the modules in the `package.json` file included 
 1. Application shows a static list with all items
 2. Application receives a continuous stream of updates over the websocket and can update the records in place and display them
 3. Application is performant when `NUM_ITEMS = 1000` and `MESSAGES_PER_SECOND = 1000` (you'll want to tweak the app to have 1000 rows as well)
+
+### Implementation
+
+I used Parcel to bundle the app. A lot of react apps are bundled with Webpack, which often requires a lot of setup and long term headache of maintance. Parcel is a lot easier to get setup and feels a lot more performant (which might not be any better at scale compared to Webpack).
+
+To start the client app: `npm run dev` with `npm start` which is odd because that script isn't defined in package.json.
+
+I do advocate for writing automated tests and I do subscribe to a list of conventions. Some are in the react app, some might not because it's such a small thing. With the exception of showing that I can write tests, I didn't feel like component unit tests would provide much value in this context. I used Faker to generate the names just so that it would be some realistic input.
+
+Going further, I'd probably throttle the updates to state maybe ever 5 seconds so that the app doesn't re-render the table so frequently.
+
+After getting it to work, my concerns became focused on performance optimizations, and some styles.

@@ -1,0 +1,31 @@
+table {
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+.table {
+  width: 100%;
+}
+
+.table__header {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.table__container {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  max-height: 80vh;
+  overflow-y: scroll;
+  margin: 100px auto 0;
+  padding: 20px;
+}
+
+
+/*# sourceMappingURL=/src.e31bb0bc.css.map */

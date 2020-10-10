@@ -2,9 +2,17 @@
   "name": "frontend-interview-realtime",
   "version": "0.0.1",
   "private": true,
+  "scripts": {
+    "dev": "parcel ./src/index.html"
+  },
   "dependencies": {
     "express": "^4.15.2",
+    "faker": "^5.1.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "ws": "^6.1.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
 }
